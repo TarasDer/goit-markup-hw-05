@@ -80,7 +80,7 @@ header .container {
 }
 
 .header-logo {
-  margin-right: 93px;
+  margin-right: 91px;
 }
 
 .logo-first {
@@ -109,6 +109,7 @@ header .container {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  /* text-align: center; */
 
   color: var(--text-main-color);
   text-decoration: none;
@@ -116,6 +117,10 @@ header .container {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  padding-bottom: 28px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -123,8 +128,25 @@ header .container {
   color: var(--accent-color);
 }
 
+.site-nav-item {
+  position: relative;
+}
+
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  /* padding-bottom: 20px; */
 }
 
 .email-icon {
@@ -156,6 +178,9 @@ header .container {
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email:hover,
@@ -268,7 +293,7 @@ header .container {
 
 .section-title {
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
 }
@@ -284,6 +309,30 @@ header .container {
 .examples-list {
   display: flex;
   justify-content: space-between;
+}
+
+.example-card {
+  position: relative;
+}
+
+.examle-section-thumb {
+  position: absolute;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.example-section-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
 }
 
 /* ---------Section Team-------- */
@@ -351,6 +400,9 @@ header .container {
   border-radius: 50%;
   background-color: var(--primary-white-color);
   color: #afb1b8;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icon {
@@ -368,7 +420,7 @@ header .container {
 .clients-section {
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: ;
+  background-color: #f5f5f5;
 }
 
 .clients-section-title {
@@ -390,6 +442,9 @@ header .container {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
@@ -432,6 +487,9 @@ footer .logo-second {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:hover,
@@ -456,6 +514,9 @@ footer .logo-second {
   font-size: 14px;
   line-height: 1.71x;
   letter-spacing: 0.03em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-address {
@@ -482,6 +543,9 @@ footer .logo-second {
 .footer-socials-item .socials-link {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-socials-item .socials-link:hover {
@@ -515,6 +579,9 @@ footer .logo-second {
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-button:hover,
@@ -534,6 +601,9 @@ footer .logo-second {
 .works .card {
   background-color: var(--primary-white-color);
   width: 370px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .works .card:hover {
